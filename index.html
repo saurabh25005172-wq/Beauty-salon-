@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty Bliss Salon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; background:#fdfdfd; color:#333;}
+    header {background:#e07ab7; color:white; padding:20px; text-align:center;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+    section {padding:40px 20px;}
+    h2 {color:#e07ab7; margin-bottom:20px;}
+    .services {display:flex; flex-wrap:wrap; gap:20px;}
+    .service {flex:1 1 250px; background:#fff; border:1px solid #ddd; border-radius:8px; padding:20px; box-shadow:0 2px 6px rgba(0,0,0,.1);}
+    .service h3 {margin-top:0;}
+    .service img {width:100%; border-radius:6px; margin-bottom:10px;}
+    .booking-form {max-width:500px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.1);}
+    .booking-form label {display:block; margin:10px 0 5px;}
+    .booking-form input, .booking-form select, .booking-form textarea {width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;}
+    .booking-form button {margin-top:15px; padding:12px; background:#e07ab7; color:white; border:none; border-radius:4px; cursor:pointer;}
+    .booking-form button:hover {background:#c85a9e;}
+    .gallery {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .ba-item {position:relative; overflow:hidden; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.1);}
+    .ba-item img {width:100%; display:block;}
+    .ba-overlay {position:absolute; top:0; left:0; height:100%; width:50%; overflow:hidden;}
+    .ba-overlay img {width:100%; height:100%; object-fit:cover;}
+    .ba-controls {position:absolute; bottom:10px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,.6); color:white; padding:5px 10px; border-radius:20px;}
+    footer {background:#333; color:white; text-align:center; padding:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Beauty Bliss Salon</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#booking">Book Online</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.b9RrDJjbKrKTdMidu9ZPEAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hair Styling">
+        <h3>Hair Styling</h3>
+        <p>Professional cuts, coloring, and styling tailored to your look.</p>
+        <p><strong>₹1499+</strong></p>
+      </div>
+      <div class="service">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.pauXUxqNJ-k9jO4NawxrGQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Facial Treatments">
+        <h3>Facial Treatments</h3>
+        <p>Rejuvenating facials for glowing, healthy skin.</p>
+        <p><strong>₹2399</strong></p>
+      </div>
+      <div class="service">
+        <img src="https://tse1.explicit.bing.net/th/id/OIP.VOrrdHJHo84pd-Tl70vIaAHaJO?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Makeup">
+        <h3>Makeup</h3>
+        <p>Occasion-ready glam by our expert artists.</p>
+        <p><strong>₹3499</strong></p>
+      </div>
+      <div class="service">
+        <img src= https://tse1.explicit.bing.net/th/id/OIP.ACrqK3iBPHrYaa2JNEZNpAHaIV?w=720&h=810&rs=1&pid=ImgDetMain&o=7&rm=3 alt="Spa & Massage">
+        <h3>Spa & Massage</h3>
+        <p>Relaxing aromatherapy and body massage sessions.</p>
+        <p><strong>₹2999</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book an Appointment</h2>
+    <form class="booking-form" id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" required>
+      <label for="service">Service</label>
+      <select id="service" required>
+        <option value="">Select a service</option>
+        <option>Hair Styling</option>
+        <option>Facial Treatments</option>
+        <option>Makeup</option>
+        <option>Spa & Massage</option>
+      </select>
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" required>
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" required>
+      <label for="notes">Notes</label>
+      <textarea id="notes"></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <section id="gallery">
+    <h2>Before & After Gallery</h2>
+    <div class="gallery">
+      <div class="ba-item">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600" alt="Before Hair">
+        <div class="ba-overlay"><img src="https://images.unsplash.com/photo-1522335789203-71e0c88fbe75?q=80&w=600" alt="After Hair"></div>
+        <div class="ba-controls">
+          <input type="range" min="0" max="100" value="50" class="ba-range">
+        </div>
+      </div>
+      <div class="ba-item">
+        <img src="https://th.bing.com/th/id/R.7cc914506bbeab238fed7190eea1130d?rik=jLVU%2bZvCeWs8VQ&riu=http%3a%2f%2fwww.healthspectra.com%2fwp-content%2fuploads%2f2015%2f12%2fFacial02.jpg&ehk=xuasS%2fsxp1i3MtaQOz7E8vAZEPNdhvLIL2RfkR%2f3gQM%3d&risl=&pid=ImgRaw&r=0" alt="Before Facial">
+        <div class="ba-overlay"><img src="https://images.unsplash.com/photo-1585386959984-a41552231681?q=80&w=600" alt="After Facial"></div>
+        <div class="ba-controls">
+          <input type="range" min="0" max="100" value="50" class="ba-range">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Beauty Bliss Salon | Meerut</p>
+  </footer>
+
+  <script>
+    // Booking form submission
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert("Thank you! Your booking request has been submitted.");
+      this.reset();
+    });
+
+    // Before-after slider functionality
+    document.querySelectorAll('.ba-item').forEach(item=>{
+      const overlay = item.querySelector('.ba-overlay');
+      const range = item.querySelector('.ba-range');
+      range.addEventListener('input', ()=>{
+        overlay.style.width = range.value + '%';
+      });
+    });
+  </script>
+</body>
+</html>
